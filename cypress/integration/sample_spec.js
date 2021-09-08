@@ -6,7 +6,10 @@
 // https://on.cypress.io/writing-first-test
 describe('My first Test', () => {
   it('Visits', () => {
-    var url = Cypress.env('URL');
+    var url = Cypress.env('URL'); 
+    expect(url).to.exist;
+
+    
     cy.log(url);
     cy.visit(url)
   })

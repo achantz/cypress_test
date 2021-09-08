@@ -3,8 +3,9 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "cypress": "npm run cy:run",
-    "cy:run": "cypress run --spec 'cypress/integration/sample_spec.js' --env URL=${URL}"
+    "cypress": "URL='https://www.msn.com' && echo URL is ${URL} && npm run cy:run",
+    "cy:run": "cypress run --spec 'cypress/integration/sample_spec.js' --env URL=${URL}",
+    "env-var-sim": "URL='https://www.msn.com' && npm run cypress"
   },
   "author": "",
   "license": "ISC",
